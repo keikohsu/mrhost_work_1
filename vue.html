@@ -27,13 +27,9 @@
       </template>
     </div>
     <div class="cantainer_right">
-      <h1>找到56間住宿</h1>
-      <select>
-        <option  v-bind:option="">ddd</option>
-        <option  v-bind:option="">ddd</option>
-      </select>
+      <h1>找到4間住宿</h1>
       <div class="right" v-for='item in hotel'>
-        <a :href="item.href">
+        <a class="img_over" :href="item.href">
           <img :alt="item.name" :src="item.images">
         </a>
     <div class="content_news">
@@ -68,26 +64,48 @@ const App = {
           name:'台北美系列-柔美精品商旅',
           address:'台北市',
           price:'1,598',
-          text:'柔美精品商旅位於台北商業中心，距離捷運松江南京站為 10 分鐘的步行路程。旅館風格時尚，也提供免費無線網路服務。 典雅的客房均配有迷你吧、衛星電視、電熱水壺。私人衛浴配有按摩浴缸和獨立淋浴。 旅館設有商務中心，提供傳真和影',
+          text:'柔美精品商旅位於台北商業中心，距離捷運松江南京站為 10 分鐘的步行路程。旅館風格時尚，也提供免費無線網路服務。 典雅的客房均配有迷你吧、衛星電視、電熱水壺。私人衛浴配有按摩浴缸和獨立淋浴。 旅館設有商務中心，提供傳真和影...',
           images:"https://worktel.mrhost.com.tw/uploads/0000/2/2022/05/29/83973843-600.jpg",
           comments:'非常好',
           star:'4.2',
-          aa:'免費設施',
+          condition:'免費設施',
           href:'https://worktel.mrhost.com.tw/zh/hotel/beauty-hotel-taipei-roumei-hotel?start=2022-07-17&end=2022-07-22'
         },
         {
           name:'PAPA WHALE昆明館',
           address:'台北市',
           price:'1,040 ',
-          text:'鳳凰閣温泉飯店坐落在北投，著名的溫泉區之一，並提供溫泉設施和住宿。此外，也提供免費停車場和免費的 WiFi。 鳳凰閣溫泉大酒店從台北火車站有 30 分鐘的車程，或 1 小時的捷運車程。從捷運新北投站抵達飯店需要步行 15 分鐘。附近',
+          text:'德立莊酒店位於台北，毗鄰捷運西門站，提供舒適的住宿環境。所有客房均提供免費 WiFi。 德立莊酒店緊鄰有各式各樣餐飲和娛樂選項的西門町購物商圈，距離台北車站為 1 站捷運車程，距離台北松山機場為 7 站捷運車程，距離二二八和平紀...',
           images:"https://worktel.mrhost.com.tw/uploads/0000/2/2022/06/13/public-6-600.jpg",
           comments:'很棒',
           star:'4.1',
-          aa:'廚房',
+          condition:'免費設施',
           href:'https://worktel.mrhost.com.tw/zh/hotel/beauty-hotel-taipei-roumei-hotel?start=2022-07-17&end=2022-07-22'
         },
+         {
+          name:'鳳凰閣溫泉旅店',
+          address:'台北市',
+          price:'2,682',
+          text:'鳳凰閣温泉飯店坐落在北投，著名的溫泉區之一，並提供溫泉設施和住宿。此外，也提供免費停車場和免費的 WiFi。 鳳凰閣溫泉大酒店從台北火車站有 30 分鐘的車程，或 1 小時的捷運車程。從捷運新北投站抵達飯店需要步行 15 分鐘。附近...',
+          images:"https://worktel.mrhost.com.tw/uploads/0000/2/2022/06/13/69202646-600.jpg",
+          comments:'非常好',
+          star:'4.0',
+          condition:'悠遊國旅適用',
+          href:'https://worktel.mrhost.com.tw/zh/hotel/phoenix-pavilion-hot-spring-hotel'
+        },
+        {
+          name:'長富時尚旅店',
+          address:'台北市',
+          price:'1,980',
+          text:'長富時尚旅店地理位置便利，距離捷運雙連和中山站僅 10 分鐘步行路程，佈置典雅的客房內均提供免費 WiFi。 現代化客房設有空調、落地窗、平面有線電視、迷你吧和書桌。寬敞的私人衛浴內配有浴缸、淋浴設施和免費盥洗用品。 旅店距離...',
+          images:"https://worktel.mrhost.com.tw/uploads/0000/2/2022/06/05/publish-area-3-600.jpg",
+          comments:'非常好',
+          star:'4.0',
+          condition:'禁菸客房',
+          href:'https://worktel.mrhost.com.tw/zh/hotel/phoenix-pavilion-hot-spring-hotel'
+        }
       ],
-      options:['免費設施','禁菸客房','廚房','動物友善']
+      options:['免費設施','禁菸客房','廚房','動物友善','悠遊國旅適用']
   
     }
   },
@@ -98,21 +116,12 @@ const App = {
   // 方法(物件)
   methods: {
       reverseArray: function(){
-        // this.hotel.reverse();
     },
   },
 };
 
     Vue.createApp(App).mount('#app')
 
-    // Vue.createApp({
-    //   data()  {
-    //     return{
-    //       counter:0,
-    //       text: '這次一',
-    //     }
-    //   }
-    // }).mount('#app')
   </script>
 </body>
 </html>

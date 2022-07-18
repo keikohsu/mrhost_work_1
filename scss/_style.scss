@@ -6,6 +6,7 @@
   h1{
     font-size: 30px;
     font-weight: bold;
+    margin-bottom: 17px;
   }
 }
 .row{
@@ -15,8 +16,12 @@
    width: 23%;
    border: 1px solid #dfdfdf;
    margin-right: 20px;
+    height: 100%;
+    padding: 15px 10px;
    @include pad-width{
    width: 100%;
+   padding: 15px 0px;
+   border: 0px solid #dfdfdf;
   }
   }
   .cantainer_right{
@@ -55,9 +60,6 @@
           background-size: cover;
           width: 20px;
         }
-        @include pad-width{
-          
-        }
       }
       .content_text{
         font-size: 15px;
@@ -66,17 +68,36 @@
         @include pad-width{
         padding-bottom: 15px;
         }
+        
       }
       @include pad-width{
         width: auto;
         padding: 0 10px;
       }
     }
+  .img_over{
+        width: 410px;
+        overflow: hidden;
+        @include pad-width{
+          width: 100%;
+        }
+    }
     img{
-      width: 247px;
-      height: 170px;
+    max-width: 410px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: .3s;
+
+    &:hover{
+      transform: scale(1.1);
+      overflow: hidden;
+      transition: .3s;
+    }
+    object-fit: contain;
       @include pad-width{
         width: 100%;
+        max-width: 100%;
         height: auto;
        }
     }
@@ -87,6 +108,10 @@
       justify-content: space-between;
       align-items: flex-end;
       padding: 15px ;
+
+      @include pc-width{
+        width: 30%;
+        }
       @include pad-width{
         flex-direction: row-reverse;
         align-items: center;
@@ -95,6 +120,8 @@
       .top_num{
         padding: 10px 0;
         font-size: 14px;
+        display: flex;
+        align-items: center;
         @include pad-width{
           display: flex;
           align-items: center;

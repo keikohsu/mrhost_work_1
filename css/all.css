@@ -8,6 +8,7 @@
 .cantainer h1 {
   font-size: 30px;
   font-weight: bold;
+  margin-bottom: 17px;
 }
 
 .row {
@@ -20,11 +21,15 @@
   width: 23%;
   border: 1px solid #dfdfdf;
   margin-right: 20px;
+  height: 100%;
+  padding: 15px 10px;
 }
 
 @media screen and (max-width: 768px) {
   .row .left {
     width: 100%;
+    padding: 15px 0px;
+    border: 0px solid #dfdfdf;
   }
 }
 
@@ -102,14 +107,40 @@
   }
 }
 
+.row .right .img_over {
+  width: 410px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .row .right .img_over {
+    width: 100%;
+  }
+}
+
 .row .right img {
-  width: 247px;
-  height: 170px;
+  max-width: 410px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.row .right img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  overflow: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 @media screen and (max-width: 768px) {
   .row .right img {
     width: 100%;
+    max-width: 100%;
     height: auto;
   }
 }
@@ -132,6 +163,12 @@
   padding: 15px;
 }
 
+@media screen and (max-width: 996px) {
+  .row .right .content_evaluation {
+    width: 30%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .row .right .content_evaluation {
     -webkit-box-orient: horizontal;
@@ -147,6 +184,12 @@
 .row .right .content_evaluation .top_num {
   padding: 10px 0;
   font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -270,3 +313,4 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/*# sourceMappingURL=all.css.map */
