@@ -1,0 +1,96 @@
+.cantainer {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  font-family: Microsoft JhengHei;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row .left {
+  width: 23%;
+  border: 1px solid #dfdfdf;
+  margin-right: 20px;
+}
+
+.row .cantainer_right {
+  width: 70%;
+}
+
+.row .right {
+  width: 100%;
+  border: 1px solid #dfdfdf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.row .right .content_news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 75%;
+  padding: 15px;
+}
+
+.row .right .content_news a {
+  font-size: 16px;
+  display: block;
+  width: 100%;
+}
+
+.row .right .content_news .content_address img {
+  content: 'sff';
+  height: 20px;
+  background-size: cover;
+  width: 20px;
+}
+
+.row .right img {
+  width: 247px;
+  height: 170px;
+}
+
+.row .right .content_evaluation {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 15px;
+}
+
+.row .right .content_evaluation .top_num {
+  padding: 10px 0;
+}
+
+.row .right .content_evaluation .price {
+  font-size: 18px;
+  color: #1a2b48;
+  font-weight: bold;
+}
+
+.row .right .content_evaluation span {
+  background: #e60014;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 7px 7px;
+}

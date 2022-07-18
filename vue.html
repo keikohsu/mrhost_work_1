@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<link rel="stylesheet" href="/css/all.css">
+
+<script src="https://unpkg.com/vue@next"></script>
+
+
+  <div id="app" class="cantainer">
+
+
+
+
+    <div class="row">
+
+    <div class="left" >
+      透過以下分類搜尋:
+      <template v-for='option in options'>
+        <div>
+          <label>
+            <input type="checkbox">{{option}}
+          </label>
+        </div>
+      </template>
+    </div>
+    <div class="cantainer_right">
+      <h1>找到56間住宿</h1>
+      <select>
+        <option  v-bind:option="">ddd</option>
+        <option  v-bind:option="">ddd</option>
+      </select>
+      <div class="right" v-for='item in hotel'>
+        <a :href="item.href">
+          <img :alt="item.name" :src="item.images">
+        </a>
+    <div class="content_news">
+      <a :href="item.href">{{item.name}}</a>
+  <br/>
+      <p class="content_address"><img src="./images/location-pin.svg" alt="">{{item.address}}</p>
+      <p  class="content_text">{{item.text}}</p>
+    </div>
+    <div class="content_evaluation">
+      <p class="top_num">{{item.comments}} <span>{{item.star}}</span> </p>
+      <div class="price">NT {{item.price}} <sup>起</sup></div>
+    </div>
+  </div>
+</div>
+
+</div>
+  </div>
+
+</head>
+<body>
+  
+
+  <script>
+
+const App = {
+  // 資料
+  data()  {
+    return {
+      selector:'為您精選',
+      hotel:[
+        {
+          name:'台北美系列-柔美精品商旅',
+          address:'台北市',
+          price:'1,598',
+          text:'柔美精品商旅位於台北商業中心，距離捷運松江南京站為 10 分鐘的步行路程。旅館風格時尚，也提供免費無線網路服務。 典雅的客房均配有迷你吧、衛星電視、電熱水壺。私人衛浴配有按摩浴缸和獨立淋浴。 旅館設有商務中心，提供傳真和影',
+          images:"https://worktel.mrhost.com.tw/uploads/0000/2/2022/05/29/83973843-600.jpg",
+          comments:'非常好',
+          star:'4.2',
+          aa:'免費設施',
+          href:'https://worktel.mrhost.com.tw/zh/hotel/beauty-hotel-taipei-roumei-hotel?start=2022-07-17&end=2022-07-22'
+        },
+        {
+          name:'PAPA WHALE昆明館',
+          address:'台北市',
+          price:'1,040 ',
+          text:'鳳凰閣温泉飯店坐落在北投，著名的溫泉區之一，並提供溫泉設施和住宿。此外，也提供免費停車場和免費的 WiFi。 鳳凰閣溫泉大酒店從台北火車站有 30 分鐘的車程，或 1 小時的捷運車程。從捷運新北投站抵達飯店需要步行 15 分鐘。附近',
+          images:"https://worktel.mrhost.com.tw/uploads/0000/2/2022/06/13/public-6-600.jpg",
+          comments:'很棒',
+          star:'4.1',
+          aa:'廚房',
+          href:'https://worktel.mrhost.com.tw/zh/hotel/beauty-hotel-taipei-roumei-hotel?start=2022-07-17&end=2022-07-22'
+        },
+      ],
+      options:['免費設施','禁菸客房','廚房','動物友善']
+  
+    }
+  },
+  // 生命週期 (函式) 元件
+  created()  {
+
+  },
+  // 方法(物件)
+  methods: {
+      reverseArray: function(){
+        // this.hotel.reverse();
+    },
+  },
+};
+
+    Vue.createApp(App).mount('#app')
+
+    // Vue.createApp({
+    //   data()  {
+    //     return{
+    //       counter:0,
+    //       text: '這次一',
+    //     }
+    //   }
+    // }).mount('#app')
+  </script>
+</body>
+</html>
